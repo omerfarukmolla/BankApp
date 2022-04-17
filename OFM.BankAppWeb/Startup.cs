@@ -8,6 +8,7 @@ using Microsoft.Extensions.Hosting;
 using OFM.BankAppWeb.Data.Context;
 using OFM.BankAppWeb.Data.Interfaces;
 using OFM.BankAppWeb.Data.Repositories;
+using OFM.BankAppWeb.Data.UnitOfWork;
 using OFM.BankAppWeb.Mapping;
 using System;
 using System.Collections.Generic;
@@ -27,11 +28,12 @@ namespace OFM.BankAppWeb
             {
                 opt.UseSqlServer("server=localhost\\SQLEXPRESS; database=BankDb; integrated security=true");
             });
-            services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
-            services.AddScoped<IApplicationUserRepository, ApplicationUserRepository>();
+            //services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
+            //services.AddScoped<IApplicationUserRepository, ApplicationUserRepository>();
             services.AddScoped<IApplicationUserMapper, ApplicationUserMapper>();
+            services.AddScoped<IUow, Uow>();
             services.AddScoped<IAccountMapper, AccountMapper>();
-            services.AddScoped<IAccontRepository, AccontRepository>();
+            //services.AddScoped<IAccontRepository, AccontRepository>();
             services.AddControllersWithViews();
         }
 

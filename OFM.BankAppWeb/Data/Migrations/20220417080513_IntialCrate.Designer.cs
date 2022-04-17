@@ -9,8 +9,8 @@ using OFM.BankAppWeb.Data.Context;
 namespace OFM.BankAppWeb.Data.Migrations
 {
     [DbContext(typeof(BankContext))]
-    [Migration("20220404101239_InitialCrate")]
-    partial class InitialCrate
+    [Migration("20220417080513_IntialCrate")]
+    partial class IntialCrate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

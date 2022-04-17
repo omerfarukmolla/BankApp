@@ -2,7 +2,7 @@
 
 namespace OFM.BankAppWeb.Data.Migrations
 {
-    public partial class InitialCrate : Migration
+    public partial class IntialCrate : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {

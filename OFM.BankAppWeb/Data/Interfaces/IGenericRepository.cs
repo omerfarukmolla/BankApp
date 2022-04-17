@@ -12,5 +12,6 @@ namespace OFM.BankAppWeb.Data.Interfaces
         void Delete(T entity);
         T GetById(object id);
         List<T> GetAll();
+        IQueryable<T> GetQueryable();
     }
 }
